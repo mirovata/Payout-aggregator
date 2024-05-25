@@ -10,7 +10,8 @@
 
 ## Как развернуть проект:
 
-Форкните репозиторий и клонируйте его:
+1. Форкните репозиторий в ваш GitHub.
+2. Клонируйте репозиторий на ваш компьютер:
 
 ~~~
 git@github.com:your_username/Payout-aggregator.git
@@ -20,6 +21,22 @@ git@github.com:your_username/Payout-aggregator.git
 
 ~~~
 pip install -r requirements.txt
+~~~
+Настройте переменные окружения:
+1. Скопируйте файл .env.example и назовите его .env:
+~~~
+cp .env.example .env
+~~~
+Откройте файл .env в любом текстовом редакторе и настройте переменные окружения в соответствии с вашими требованиями. Например:
+~~~
+#Токен телеграм бота
+TELEGRAM_TOKEN='your_telegram_bot_token'
+#Ваш адрес в mongodb
+URI='mongodb://username:password@hostname:27017/mydatabase'
+#Ваша база данных
+DB='your_db'
+#Ваша коллекция
+COLLECTION='your_collection'
 ~~~
 
 Запустите бота:
