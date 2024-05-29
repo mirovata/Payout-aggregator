@@ -10,7 +10,7 @@ from app.algorithm import payout_aggregator
 router = Router()
 
 
-@router.message(F.text)
+@router.message(F.text != '/start')
 async def command_report_handler(message: Message):
     try:
         dict1 = json.loads(message.text)
